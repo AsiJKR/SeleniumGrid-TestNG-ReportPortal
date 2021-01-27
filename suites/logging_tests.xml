@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "Parallel Testing Suite" parallel = "classes" thread-count = "10" verbose="1">
+    <listeners>
+        <listener class-name="utils.listners.TestListener"/>
+    </listeners>
+    <test name="Screen Test" parallel = "classes" thread-count = "10" verbose="1">
+        <classes>
+            <class name="qe.core.ui.tests.Login.Login1Test"/>
+            <class name="qe.core.ui.tests.Login.Login2Test"/>
+        </classes>
+    </test>
+</suite>
